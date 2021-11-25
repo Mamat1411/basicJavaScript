@@ -1,2 +1,2 @@
-alert('Hello, World!');
-prompt('Masukkan Nama: ');
+var name = prompt('Masukkan Nama: ');
+alert(name);
