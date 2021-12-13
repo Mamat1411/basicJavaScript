@@ -18,6 +18,8 @@ do {
         hasil = (comp == "Orang") ? "Menang" : "Kalah";
     } else if (player == "Semut") {
         hasil = (comp == "Gajah") ? "Menang" : "Kalah";
+    } else {
+        hasil = "Anda memasukkan pilihan yang salah";
     }
 
     alert("Kamu memilih : " + player + " dan komputer memilih: " + comp + "\nMaka hasilnya adalah: Kamu " + hasil +"!!!");
