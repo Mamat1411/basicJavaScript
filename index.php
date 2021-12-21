@@ -7,8 +7,7 @@
     <title>Basic JavaScript</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-
+    
     <script src="latihan.js"></script>
 </body>
 </html>
