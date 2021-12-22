@@ -90,5 +90,19 @@ function passangerBoarding(name, passanger) {
 }
 //passangerLeaving Function init
 function passangeLeaving(name, passanger) {
-    
+    //if the seat is empty
+    if (passanger.length == 0) {
+        alert("No Passanger on board!");
+        return passanger;
+    } else {
+        for (var i = 0; i < passanger.length; i++) {
+            if (name == passanger[i]) {
+                passanger[i] = undefined;
+                return passanger;
+            } else {
+                alert("No Passanger with Such Name on board!");
+                return passanger;
+            }
+        }
+    }
 }
