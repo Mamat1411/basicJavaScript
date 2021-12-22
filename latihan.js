@@ -88,3 +88,7 @@ function passangerBoarding(name, passanger) {
         }
     }
 }
+//passangerLeaving Function init
+function passangeLeaving(name, passanger) {
+    
+}
