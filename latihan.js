@@ -62,23 +62,5 @@
 //Public Transport Passanger Management
 var passanger = ["Mamat", undefined, "Mujahid"];
 function addPassanger(name, passanger) {
-    if (passanger.length == 0) {
-        passanger.push(name);
-        return passanger;
-    } else {
-        for (var i = 0; i < passanger.length; i++) {
-            if (passanger[i] == undefined) {
-                passanger[i] = name;
-                return passanger;
-            } 
-            if (name == passanger[i]) {
-                alert("This passanger already exists!");
-                return passanger;
-            } 
-            // if (passanger.length !== 0) {
-            //     passanger.push(name);
-            //     return passanger;
-            // }
-        }
-    }
+    
 }
