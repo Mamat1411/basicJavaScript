@@ -61,7 +61,7 @@
 
 //Public Transport Passanger Management
 //Variable init
-var passanger = ["Mamat", undefined, "Mujahid"];
+var passanger = [];
 //passangerBoarding Function init
 function passangerBoarding(name, passanger) {
     //if there is no passanger
@@ -72,17 +72,17 @@ function passangerBoarding(name, passanger) {
     } else {
         //trace the entire seat from the beginning
         for (var i = 0; i < passanger.length; i++) {
-            //if the seat is empty in the middle of the array
-            if (passanger[i] == undefined) {
+            //if the passanger's name is the same as one of the existing passangers
+            if (name == passanger[i]) {
+                alert("This passanger already exists!");
+                return passanger;
+            } else if (passanger[i] == undefined) {
+                //if the seat is empty in the middle of the array
                 passanger[i] = name;
                 return passanger;
-            } else if (i = passanger.length - 1) {
+            } else if (i == passanger.length - 1) {
                 //if the seat is orderly filled and still available
                 passanger.push(name);
-                return passanger;
-            }else if (name == passanger[i]) {
-                //if the passanger's name is the same as one of the exsisting passangers
-                alert("This passanger already exists!");
                 return passanger;
             }
         }
