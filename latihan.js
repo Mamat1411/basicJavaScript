@@ -61,48 +61,89 @@
 
 //Public Transport Passanger Management
 //Variable init
-var passanger = [];
-//passangerBoarding Function init
-function passangerBoarding(name, passanger) {
-    //if there is no passanger
-    if (passanger.length == 0) {
-        //insert a new passanger into the array
-        passanger.push(name);
-        return passanger;
-    } else {
-        //trace the entire seat from the beginning
-        for (var i = 0; i < passanger.length; i++) {
-            //if the passanger's name is the same as one of the existing passangers
-            if (name == passanger[i]) {
-                alert("This passanger already exists!");
-                return passanger;
-            } else if (passanger[i] == undefined) {
-                //if the seat is empty in the middle of the array
-                passanger[i] = name;
-                return passanger;
-            } else if (i == passanger.length - 1) {
-                //if the seat is orderly filled and still available
-                passanger.push(name);
-                return passanger;
-            }
-        }
-    }
+// var passanger = [];
+// //passangerBoarding Function init
+// function passangerBoarding(name, passanger) {
+//     //if there is no passanger
+//     if (passanger.length == 0) {
+//         //insert a new passanger into the array
+//         passanger.push(name);
+//         return passanger;
+//     } else {
+//         //trace the entire seat from the beginning
+//         for (var i = 0; i < passanger.length; i++) {
+//             if (passanger[i] == undefined) {
+//                 //if the seat is empty in the middle of the array
+//                 passanger[i] = name;
+//                 return passanger;
+//             } else if (passanger[i] == name) {
+//                 //if the passanger's name is the same as one of the existing passangers
+//                 alert("This passanger already exists!");
+//                 return passanger;
+//             } else if (i == passanger.length - 1) {
+//                 //if the seat is orderly filled and still available
+//                 passanger.push(name);
+//                 return passanger;
+//             }
+//         }
+//     }
+// }
+// //passangerLeaving Function init
+// function passangerLeaving(name, passanger) {
+//     //if the seat is empty
+//     if (passanger.length == 0) {
+//         alert("No Passanger on board!");
+//         return passanger;
+//     } else {
+//         //if the seat is not empty
+//         //track the seat from the beginning
+//         for (var i = 0; i < passanger.length; i++) {
+//             if (name == passanger[i]) {
+//                 passanger[i] = undefined;
+//                 return passanger;
+//             } else if (i == passanger.length - 1) {
+//                 alert("No Passanger with Such Name on board!");
+//                 return passanger;
+//             }
+//         }
+//     }
+// }
+
+//Object Exercise
+//Literal Object
+// var student1 = {
+//     name: 'Muhammad Mujahid',
+//     id: '123',
+//     email: 'muhammadmujahid14@gmail.com',
+//     workplace: 'XSIS Mitra Utama'
+// }
+// var student2 = {
+//     name: 'Sari Setyaningsih',
+//     id: '456',
+//     email: 'sarisetyaningsih98@gmail.com',
+//     workplace: 'Unemployed'
+// }
+
+//Function Declaration Object
+// function students(name, id, email, workplace) {
+//     var student = {};
+//     student.name = name;
+//     student.id = id;
+//     student.email = email;
+//     student.workplace = workplace;
+//     return student;
+// }
+
+// var student1 = students("Muhammad Mujahid", 123, "muhammadmujahid14@gmail.com", "XSIS Mitra Utama");
+// var student2 = students("Sari Setyaningsih", 456, "sarisetyaningsih98@gmail.com", "Unemployed");
+
+//Generating Object Using Constructor
+function Student(name, id, email, workplace) {
+    this.name = name;
+    this.id = id;
+    this.email = email;
+    this.workplace = workplace;
 }
-//passangerLeaving Function init
-function passangeLeaving(name, passanger) {
-    //if the seat is empty
-    if (passanger.length == 0) {
-        alert("No Passanger on board!");
-        return passanger;
-    } else {
-        for (var i = 0; i < passanger.length; i++) {
-            if (name == passanger[i]) {
-                passanger[i] = undefined;
-                return passanger;
-            } else {
-                alert("No Passanger with Such Name on board!");
-                return passanger;
-            }
-        }
-    }
-}
+
+var student1 = new Student("Muhammad Mujahid", 123, "muhammadmujahid14@gmail.com", "XSIS Mitra Utama");
+var student2 = new Student("Sari Setyaningsih", 456, "sarisetyaningsih98@gmail.com", "Unemployed");
